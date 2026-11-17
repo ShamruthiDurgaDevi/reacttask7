@@ -1,0 +1,165 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6fb;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+header h1 {
+  color: #1a0a5b;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #666;
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.top-section h2 {
+  color: #333;
+}
+
+.top-section button {
+  padding: 12px 20px;
+  background: #4c1d95;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.top-section button:hover {
+  background: #1a0a5b;
+}
+
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  );
+  gap: 22px;
+}
+
+.user-card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+}
+
+.user-header {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.user-id {
+  display: inline-block;
+  background: #eee7ff;
+  color: #4c1d95;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.user-header h3 {
+  color: #1a0a5b;
+  margin-bottom: 5px;
+}
+
+.user-header p {
+  color: #777;
+}
+
+.user-details p {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 15px;
+  overflow-wrap: anywhere;
+}
+
+.user-details strong {
+  color: #333;
+}
+
+.user-details span,
+.user-details a {
+  color: #666;
+  text-decoration: none;
+}
+
+.user-details a:hover {
+  color: #4c1d95;
+  text-decoration: underline;
+}
+
+.loading,
+.error {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.loading {
+  color: #4c1d95;
+}
+
+.error {
+  color: red;
+}
+
+/* Mobile responsive design */
+@media (max-width: 600px) {
+  .container {
+    width: 92%;
+    margin: 25px auto;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  .top-section {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .top-section h2 {
+    font-size: 20px;
+  }
+
+  .user-grid {
+    grid-template-columns: 1fr;
+  }
+}
